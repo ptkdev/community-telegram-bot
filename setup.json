@@ -1,13 +1,13 @@
 {
-	"package_name": "node-telegram-bot-boilerplate",
+	"package_name": "community-telegram-bot",
 	"package_org": "@ptkdev",
-	"display_name": "Node Telegram BOT Boilerplate",
-	"description": "Create your telegram bot with this friendly boilerplate. Use this repository as template for your bot",
+	"display_name": "Funny and Stupid Telegram bot of OpenSource Support Group",
+	"description": "Funny and Stupid Telegram bot of OpenSource Support Group",
 	"author": "Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)",
 	"author_markdown": "[Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>",
 	"author_url": "https://ptk.dev",
 	"github_nickname": "ptkdev",
 	"github_repository_url": "github.com/ptkdev-boilerplate",
-	"github_full_repository_url": "github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate",
+	"github_full_repository_url": "github.com/ptkdev-boilerplate/community-telegram-bot",
 	"email": "support@ptkdev.io"
 }

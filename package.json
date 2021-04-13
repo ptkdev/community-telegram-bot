@@ -1,8 +1,8 @@
 {
-	"name": "@ptkdev/node-telegram-bot-boilerplate",
-	"displayName": "Node Telegram BOT Boilerplate",
-	"description": "Create your telegram bot with this friendly boilerplate. Use this repository as template for your bot",
-	"version": "1.0.20210412",
+	"name": "@ptkdev/community-telegram-bot",
+	"displayName": "Funny and Stupid Telegram bot of OpenSource Support Group",
+	"description": "Funny and Stupid Telegram bot of OpenSource Support Group",
+	"version": "1.0.0",
 	"main": "dist/core/bot.js",
 	"publishConfig": {
 		"access": "public"
@@ -12,13 +12,13 @@
 	"license-docs": "CC BY 4.0",
 	"license-translations": "CC BY 4.0",
 	"license-images": "CC BY-NC 4.0",
-	"homepage": "https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate",
+	"homepage": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate.git"
+		"url": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ptkdev-boilerplate/node-telegram-bot-boilerplate/issues"
+		"url": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot/issues"
 	},
 	"engines": {
 		"node": ">=14.0.0"
@@ -37,7 +37,7 @@
 		"docs": "git submodule update --recursive && markserv ./README.md",
 		"lint": "eslint . --cache --ext .ts,.js",
 		"lint-fix": "eslint . --cache --ext .ts,.js --fix",
-		"git-set-upstream": "git remote add upstream git@github.com:ptkdev-boilerplate/node-telegram-bot-boilerplate.git && git fetch upstream",
+		"git-set-upstream": "git remote add upstream git@github.com:ptkdev-boilerplate/community-telegram-bot.git && git fetch upstream",
 		"git-pull-upstream": "git pull upstream main && git pull upstream beta && git pull upstream nightly",
 		"git-pull": "git pull --recursive",
 		"git-ignore-reset": "git rm -r --cached . && git add . && git commit -m \"[Fix] Removing all files in .gitignore\"",
@@ -73,6 +73,7 @@
 		"json": "^10.0.0",
 		"markserv": "^1.17.4",
 		"nodemon": "^2.0.7",
+		"replace-in-file": "^6.2.0",
 		"shelljs": "^0.8.4",
 		"ts-jest": "^26.5.4",
 		"ts-node": "^9.1.1",
@@ -86,7 +87,7 @@
 		"node",
 		"node-module",
 		"node-library",
-		"node-telegram-bot-boilerplate",
+		"community-telegram-bot",
 		"node-library-boilerplate",
 		"boilerplate",
 		"github-template"
