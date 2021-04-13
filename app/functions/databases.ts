@@ -25,7 +25,7 @@ databases.users.defaults({ users: [] }).write();
  *
  * @Context: ctx.update.message.from
  *
- * @interface [TelegramUserInterface](https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
+ * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
  *
  * @param { TelegramUserInterface } json - telegram user object
  *

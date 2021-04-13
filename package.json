@@ -12,13 +12,13 @@
 	"license-docs": "CC BY 4.0",
 	"license-translations": "CC BY 4.0",
 	"license-images": "CC BY-NC 4.0",
-	"homepage": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot",
+	"homepage": "https://github.com/ptkdev/community-telegram-bot",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot.git"
+		"url": "https://github.com/ptkdev/community-telegram-bot.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ptkdev-boilerplate-boilerplate/community-telegram-bot/issues"
+		"url": "https://github.com/ptkdev/community-telegram-bot/issues"
 	},
 	"engines": {
 		"node": ">=14.0.0"
