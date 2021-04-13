@@ -33,16 +33,7 @@ Funny and Stupid Telegram bot of OpenSource Support Group
 
 -   [✔️] Easy to use
 -   [✔️] MIT License
--   [✔️] Make telegram bot with node
--   [✔️] Friendly boilerplate + Github templates
--   [✔️] Typescript + TSPaths preconfigured
--   [✔️] Userfriendly folders tree
--   [✔️] Prettiers and ESLint preconfigured
--   [✔️] all-contributors-cli and all-shields-cli preconfigured
--   [✔️] JEST Test preconfigured
--   [✔️] Full async code
--   [✔️] Github and Vscode dotfiles preconfigured
--   [✔️] Translations: 🇬🇧 🇮🇹 🇵🇱 (Help me ❤️)
+-   [✔️] [Community based](https://t.me/ptkdev_support_italian) telegram bot
 
 ## 🔨 Developer Mode
 
