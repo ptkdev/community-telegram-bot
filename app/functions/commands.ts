@@ -2,13 +2,17 @@
  * Telegraf Commands
  * =====================
  *
- * @contributors: Patryk Rzucidło [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
+ * @contributors: Patryk Rzucidło  [@ptkdev] <support@ptkdev.io> (https://ptk.dev)
+ * @contributors: Pasquale Carbone [@KiraPC] <pasqualecarmine.carbone@gmail.com>
  *
  * @license: MIT License
  *
  */
 import bot from "@app/functions/telegraf";
 import * as databases from "@app/functions/databases";
+import Instagram from "instagram-web-api";
+
+const client = new Instagram({ username: process.env.INSTA_USER, password: process.env.INSTA_PASS });
 
 /**
  * command: /quit
@@ -24,14 +28,19 @@ const quit = async (): Promise<void> => {
 };
 
 /**
- * command: /photo
+ * command: /memecoding
  * =====================
- * Send photo from picsum to chat
+ * Send photo from meme_coding Instagram account to chat
  *
  */
 const sendPhoto = async (): Promise<void> => {
-	bot.command("photo", (ctx) => {
-		ctx.replyWithPhoto("https://picsum.photos/200/300/");
+	bot.command("memecoding", async (ctx) => {
+		await client.login();
+		const photos = await client.getPhotosByUsername({ username: 'meme_coding', first: 5000 });
+		const memes = photos.user.edge_owner_to_timeline_media.edges.map(edge => edge.node.display_url);
+
+		const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+		ctx.telegram.sendPhoto(ctx.chat.id, randomMeme);
 	});
 };
 
@@ -45,7 +54,7 @@ const start = async (): Promise<void> => {
 	bot.start((ctx) => {
 		databases.writeUser(ctx.update.message.from);
 
-		ctx.telegram.sendMessage(ctx.message.chat.id, `Welcome! Try send /photo command or write any text`);
+		ctx.telegram.sendMessage(ctx.message.chat.id, `Welcome! Try send /memecoding command`);
 	});
 };
 
