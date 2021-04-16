@@ -1,5 +1,5 @@
 import * as command from "@app/functions/commands";
-import * as hears from "@app/functions/hears";
+import * as on from "@app/functions/on";
 
 /**
  * Start bot
@@ -14,6 +14,8 @@ import * as hears from "@app/functions/hears";
 	await command.quit();
 	await command.start();
 	await command.sendPhoto();
-	await hears.text();
+	await command.setUserInfo();
+	await command.getUserInfo();
+	await on.onText();
 	await command.launch();
 })();
