@@ -44,6 +44,46 @@ const sendPhoto = async (): Promise<void> => {
 };
 
 /**
+ * command: /setwho
+ * =====================
+ * Send photo from meme_coding Instagram account to chat
+ *
+ */
+const setUserInfo = async (): Promise<void> => {
+	bot.command("setwho", async (ctx) => {
+		const userId = ctx.message.from.id;
+		databases.writeUserCommand(userId, "setwho");
+
+		ctx.reply("Digita la tua descrizione ...");
+	});
+};
+
+/**
+ * command: /setwho
+ * =====================
+ * Send photo from meme_coding Instagram account to chat
+ *
+ */
+const getUserInfo = async (): Promise<void> => {
+	bot.command("who", async (ctx) => {
+		const regex = /@(.*?)$/gm;
+		const targetUsername = regex.exec(ctx.message.text)[1];
+
+		try {
+			const user = await databases.getWho(targetUsername);
+
+			if (user["photoId"]) {
+				ctx.replyWithPhoto(user["photoId"]);
+			}
+
+			ctx.reply(user["description"]);
+		} catch (error) {
+			ctx.reply("L'utente richiesto non è stato trovato.");
+		}
+	});
+};
+
+/**
  * command: /start
  * =====================
  * Send welcome message
@@ -67,5 +107,5 @@ const launch = async (): Promise<void> => {
 	bot.launch();
 };
 
-export { launch, quit, sendPhoto, start };
+export { launch, quit, sendPhoto, start, setUserInfo, getUserInfo };
 export default launch;
