@@ -20,6 +20,14 @@
 				"doc",
 				"bug"
 			]
+		},
+		{
+			"login": "KiraPC",
+			"name": "Pasquale Carmine Carbone",
+			"profile": "https://github.com/KiraPC",
+			"contributions": [
+				"code"
+			]
 		}
 	],
 	"contributorsPerLine": 6,
