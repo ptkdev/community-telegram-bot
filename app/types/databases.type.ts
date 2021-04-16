@@ -16,7 +16,6 @@
  *
  * @Context: ctx.update.message.from
  *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
  *
  * @param { number } id - telegram
  * @param { boolean } is_bot - is user a bot
@@ -30,8 +29,6 @@ export interface TelegramUserInterface {
 	 * Telegram User Interface
 	 * =====================
 	 *
-	 * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
-	 *
 	 * @param { number } id - telegram
 	 *
 	 */
@@ -39,8 +36,6 @@ export interface TelegramUserInterface {
 	/**
 	 * User Interface
 	 * =====================
-	 *
-	 * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
 	 *
 	 * @param { boolean } is_bot - is user a bot
 	 *
@@ -50,8 +45,6 @@ export interface TelegramUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
-	 *
 	 * @param { string } first_name - user name from telegram
 	 *
 	 */
@@ -59,8 +52,6 @@ export interface TelegramUserInterface {
 	/**
 	 * User Interface
 	 * =====================
-	 *
-	 * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
 	 *
 	 * @param { string } username - user username from telegram
 	 *
@@ -70,10 +61,55 @@ export interface TelegramUserInterface {
 	 * User Interface
 	 * =====================
 	 *
-	 * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
-	 *
 	 * @param { string } language_code - user code language from OS
 	 *
 	 */
 	language_code?: string,
+	/**
+	 * User Interface
+	 * =====================
+	 *
+	 * @param { string } lastCommand - last user command
+	 *
+	 */
+	lastCommand?: string
+}
+
+/**
+ * Who User Interface
+ *
+ */
+ export interface WhoUserInterface {
+	/**
+	 * Who User Interface
+	 * =====================
+	 *
+	 * @param { number } id - telegram user id
+	 *
+	 */
+	id: number,
+	/**
+	 * Who User Interface
+	 * =====================
+	 *
+	 * @param { string } username - the telegram user username
+	 *
+	 */
+	username?: string,
+	/**
+	 * Who User Interface
+	 * =====================
+	 *
+	 * @param { string } description - the user description
+	 *
+	 */
+	description: string,
+	/**
+	 * Who User Interface
+	 * =====================
+	 *
+	 * @param { string } photoId - telegram user photo id
+	 *
+	 */
+	photoId?: string
 }

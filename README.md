@@ -81,6 +81,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/community-telegram-bot/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/community-telegram-bot/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/community-telegram-bot/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/KiraPC"><img src="?s=100" width="100px;" alt=""/><br /><sub><b>Pasquale Carmine Carbone</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/community-telegram-bot/commits?author=KiraPC" title="Code">💻</a></td>
   </tr>
 </table>
 

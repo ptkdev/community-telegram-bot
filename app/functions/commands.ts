@@ -72,11 +72,11 @@ const getUserInfo = async (): Promise<void> => {
 		try {
 			const user = await databases.getWho(targetUsername);
 
-			if (user["photoId"]) {
-				ctx.replyWithPhoto(user["photoId"]);
+			if (user.photoId) {
+				ctx.replyWithPhoto(user.photoId);
 			}
 
-			ctx.reply(user["description"]);
+			ctx.reply(user.description);
 		} catch (error) {
 			ctx.reply("L'utente richiesto non è stato trovato.");
 		}

@@ -11,7 +11,7 @@ import lowdb from "lowdb";
 import lowdbFileSync from "lowdb/adapters/FileSync";
 import configs from "@configs/config";
 
-import type { TelegramUserInterface } from "@app/types/databases.type";
+import type { TelegramUserInterface, WhoUserInterface } from "@app/types/databases.type";
 
 const databases = { users: null, who: null };
 
@@ -27,8 +27,6 @@ databases.who.defaults({ who: [] }).write();
  * Write user information from telegram context to user database
  *
  * @Context: ctx.update.message.from
- *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
  *
  * @param { TelegramUserInterface } json - telegram user object
  *
@@ -51,8 +49,6 @@ const writeUser = async (json: TelegramUserInterface): Promise<void> => {
  * Write last user command from telegram context to user database
  *
  * @Context: ctx.update.message.from
- *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
  *
  * @param { number } id - telegram user id
  * @param { string } cmd - telegram command
@@ -78,10 +74,7 @@ const writeUserCommand = async (id: number, cmd: string): Promise<void> => {
  *
  * @Context: ctx.update.message.from
  *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
- *
  * @param { number } id - telegram user id
- * @param { string } cmd - telegram command
  *
  */
 const getUserCommand = async (id: number): Promise<string | null> => {
@@ -102,19 +95,17 @@ const getUserCommand = async (id: number): Promise<string | null> => {
  *
  * @Context: ctx.update.message.from
  *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
- * @param username
- * @param photoId
- * @param description
  *
  * @param { number } id - telegram user id
- * @param { string } cmd - telegram command
+ * @param { string } username
+ * @param { string } photoId
+ * @param { string } description
  *
  */
 const setWho = async (id: number, username: string, photoId: string, description: string): Promise<void> => {
 	const user = databases.who.get("who").find({ id }).value();
 
-	const record = { id, username, description, photoId };
+	const record: WhoUserInterface = { id, username, description, photoId };
 
 	if (user) {
 		databases.who.get("who").find({ id }).assign(record).write();
@@ -130,15 +121,11 @@ const setWho = async (id: number, username: string, photoId: string, description
  *
  * @Context: ctx.update.message.from
  *
- * @interface [TelegramUserInterface](https://github.com/ptkdev/community-telegram-bot/blob/main/app/webcomponent/types/databases.type.ts)
- * @param username
- *
- * @param { number } id - telegram user id
- * @param { string } cmd - telegram command
+ * @param { string } username - telegram user name
  *
  */
-const getWho = async (username: string): Promise<any> => {
-	const user = databases.who.get("who").find({ username }).value();
+const getWho = async (username: string): Promise<WhoUserInterface> => {
+	const user: WhoUserInterface = databases.who.get("who").find({ username }).value();
 
 	if (!user) {
 		throw new Error("Unknow user");
